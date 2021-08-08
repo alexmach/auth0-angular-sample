@@ -72,6 +72,7 @@ function configInitializer(
         deps: [AUTH0_ENABLED, Auth0Service, LegacySampleService ]
     },{
         // Using the auth0-angular Interceptor for both legacy and auth0
+        // This will not get injected with the LegacyTokenService
         provide: HTTP_INTERCEPTORS,
         useClass: AuthHttpInterceptor,
         multi: true
